@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="(https://fonts.google.com/specimen/Karla" type="text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; animation: attribution 10s ease-in-out infinite;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Karla, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: hsl(204, 43%, 93%)
+    }
+    .card {
+      display: grid;
+      grid-template-areas: 
+      'one one'
+      'two three';
+      height: 490px;
+      width: 636px;
+      margin: 5% auto;
+      transform-origin: 0% 50%;
+      animation: card 2s ease-in-out infinite;
+    }
+    @media (max-width: 768px) {
+      .card {
+        display: grid;
+        grid-template-areas: 
+        'one'
+        'two'
+        'three';
+        height: 900px;
+        width: 500px;
+      }
+      .two {
+        border-bottom-left-radius: 0px !important;
+      }
+      .three {
+        border-bottom-left-radius: 10px;
+      }
+    }
+    .one {
+      grid-area: one;
+      background: hsl(0, 0%, 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 0 30px;
+    }
+    .two {
+      grid-area: two;
+      background:  hsl(185, 75%, 39%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-left: 10px;
+      color: #fff;
+      border-bottom-left-radius: 10px;
+      animation: two 2s ease-in-out infinite;
+    }
+    .three {
+      grid-area: three;
+      background: hsl(179, 62%, 43%);
+      border-bottom-right-radius: 10px;
+      color: #fff;
+      animation: three 2s ease-in-out infinite;
+    }
+    .three h3 {
+      position: relative;
+      top: 50px;
+      left: 35px
+    }
+    .three p {
+      font-weight: 100;
+      line-height: 1.5em;
+      font-size: 14px;
+    }
+    .moving-p {
+      position: relative;
+      bottom: -70px;
+      left: 35px;
+    }
+    button {
+      background: hsl(71, 73%, 54%);
+      border: none;
+      width: 80%;
+      height: 50px;
+      border-radius: 7px;
+      color: #fff;
+    }
+    .one h2{
+      color:  hsl(185, 75%, 39%);
+      margin-top: 20px;
+     }
+     .one h4{
+       color: hsl(71, 73%, 54%);
+       margin-top: -15px;
+     }
+     .one p{
+       color:  hsl(218, 22%, 67%);
+       font-size: 16px;
+       margin-top: -15px;
+       padding-bottom: 10px;
+       line-height: 1.8em;
+     }
+     .two h4{
+       padding-top: 16px;
+     }
+     .price {
+       display: flex;
+       margin-top: -10px;
+     }
+     .two p {
+       margin-top: -10px;
+     }
+     span {
+       align-self: center;
+       font-weight: 100;
+       color: hsl(204, 43%, 93%);
+       padding-left: 15px;
+     }
+     .two h4, .price, .access, button {
+       position: relative;
+       left: 30px;
+     }
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="grid one">
+  <h2>Join our community</h2>
+
+  <h4>30-day, hassle-free money back guarantee</h4>
+
+  <p>Gain access to our full library of tutorials along with expert code reviews.<br> 
+  Perfect for any developers who are serious about honing their skills.</p>
+</div>
+<div class="grid two">
+     <h4>Monthly Subscription</h4>
+
+  <div class="price"><h1>&dollar;29</h1> <span>per month</span></div>
+
+  <p class="access">Full access for less than &dollar;1 a day</p>
+
+  <button>Sign Up</button>
+</div>
+<div class="grid three">
+  <h3>Why Us</h3>
+<div class="moving-p">
+  <p>Tutorials by industry experts</p>
+  <p>Peer &amp; expert code review</p>
+  <p>Coding exercises</p>
+  <p>Access to our GitHub repos</p>
+  <p>Community forum</p>
+  <p>Flashcard decks</p>
+  <p>New videos every week</p>
+  </div>
+  </div>
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Akinloye Ayomide</a>.
+    </p>
+  </footer>
+</body>
+</html>
